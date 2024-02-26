@@ -12,8 +12,6 @@ public class TileGenerator : MonoBehaviour
     //オブジェクト数
     [SerializeField] private int rowCount = 10;
     [SerializeField] private int columnCount = 10;
-    //オブジェクト間のスペース
-    [SerializeField] private float spacing = 1.0f;
 
     private void Start()
     {
@@ -22,8 +20,9 @@ public class TileGenerator : MonoBehaviour
         {
             for(int col =0; col < columnCount; col++)
             {
-                Vector3 position = new Vector3(col * (1 + spacing),row * (1 + spacing),0);
-                Instantiate(objectPrefab,position,Quaternion.identity);
+                Vector3 position = new Vector3(col,row,0);
+                GameObject tile = Instantiate(objectPrefab,position,Quaternion.identity);
+                tile.transform.parent = transform;
             }
         }
     }
