@@ -22,7 +22,7 @@ public class TileGenerator : MonoBehaviour
         {
             for(int col =0; col < columnCount; col++)
             {
-                Vector3 position = new Vector3(col * (10 + spacing),row * (10 + spacing),0);
+                Vector3 position = new Vector3(col * (1 + spacing),row * (1 + spacing),0);
                 Instantiate(objectPrefab,position,Quaternion.identity);
             }
         }
