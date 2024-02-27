@@ -260,8 +260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 875108539799530528, guid: 93276fcb454226743b961f4a567664a1, type: 3}
-  rowCount: 10
-  columnCount: 10
+  rowCount: 3
+  columnCount: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
