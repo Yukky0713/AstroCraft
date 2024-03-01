@@ -5,26 +5,22 @@ using UnityEngine.Tilemaps;
 
 public class TileMapGenerator : MonoBehaviour
 {
-    [SerializeField] Tilemap tilemap;
-    [SerializeField] Tile blockTile;
-    [SerializeField] Tile fieldTile;
+    //タイルマップ
+    [SerializeField] private Tilemap tilemap;
+    [SerializeField] private TileBase tile;
+    //オブジェクト数
+    [SerializeField] private int rowCount = 10;
+    [SerializeField] private int columnCount = 10;
 
     void Start()
     {
-        StartCoroutine(SetTile());
-    }
-
-    IEnumerator SetTile()
-    {
-        for (int z = 0; z < 5; z++)
+        //オブジェクトを縦横に配置
+        for(int row = 0; row < rowCount; row++)
         {
-            for (int y = 0; y < 5; y++)
+            for(int col =0; col < columnCount; col++)
             {
-                for (int x = 0; x < 5; x++)
-                {
-                    tilemap.SetTile(new Vector3Int(x, y, z * 2), z % 2 == 0 ? blockTile : fieldTile);
-                    yield return new WaitForEndOfFrame();
-                }
+                Vector3Int position = new Vector3Int(col,row, 0);
+                tilemap.SetTile(position, tile);
             }
         }
     }
