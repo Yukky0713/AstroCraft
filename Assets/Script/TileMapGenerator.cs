@@ -5,10 +5,11 @@ using UnityEngine.Tilemaps;
 
 public class TileMapGenerator : MonoBehaviour
 {
-    //タイルマップ
+    [Header("タイルマップ")]
     [SerializeField] private Tilemap tilemap;
     [SerializeField] private TileBase tile;
-    //オブジェクト数
+
+    [Header("タイル設置サイズ")]
     [SerializeField] private int rowCount = 10;
     [SerializeField] private int columnCount = 10;
 
