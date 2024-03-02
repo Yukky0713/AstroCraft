@@ -10,8 +10,8 @@ public class TileMapGenerator : MonoBehaviour
     [SerializeField] private TileBase tile;
 
     [Header("タイル設置サイズ")]
-    [SerializeField] private int rowCount = 10;
-    [SerializeField] private int columnCount = 10;
+    [SerializeField] public int rowCount = 10;
+    [SerializeField] public int columnCount = 10;
 
     void Start()
     {
